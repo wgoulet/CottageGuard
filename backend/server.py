@@ -29,9 +29,9 @@ app = FastAPI()
 app.add_middleware(AuthenticateMiddleware,
     providers={
         'okta': {
-            'issuer':"https://dev-4402362.okta.com/oauth2/default",
-            'audience': '0oa3grqlbqp3FBmWF5d7',
-            'keys':"https://dev-4402362.okta.com/oauth2/default/v1/keys"
+            'issuer':"https://dev-8623542.okta.com/oauth2/default",
+            'audience': 'api://default',
+            'keys':"https://dev-8623542.okta.com/oauth2/default/v1/keys"
         }
     },
     public_paths={'/public'},
@@ -39,7 +39,7 @@ app.add_middleware(AuthenticateMiddleware,
 
 origins = [
     "http://localhost",
-    "http://localhost:3000",
+    "http://localhost:8000",
 ]
 
 app.add_middleware(
